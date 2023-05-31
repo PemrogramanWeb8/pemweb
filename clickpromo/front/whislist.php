@@ -22,13 +22,13 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="css/e-com.css" />
+    <link rel="stylesheet" href="css/whislist.css" />
 
-    <title>E-Commerce</title>
+    <title>whislist</title>
     <link rel="website icon" type="png" href="img/bahan lain/logo2.png" />
   </head>
   <body>
-    <div class="container-fluid" style="background-color: #000000">
+    <div class="container-fluid" style="background-color: #90AFC5">
       <div class="container">
         <nav class="navbar navbar-expand-lg">
           <a class="navbar-brand" href="#">CLICKPROMO</a>
@@ -47,13 +47,13 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.html"
+                <a class="nav-link" href="index.php"
                   >Home <span class="sr-only">(current)</span></a
                 >
               </li>
 
-              <li class="nav-item active">
-                <a class="nav-link" href="e-com.html"
+              <li class="nav-item">
+                <a class="nav-link" href="e-com.php"
                   >E-Commerce <span class="sr-only">(current)</span></a
                 >
               </li>
@@ -84,7 +84,7 @@
               <li class="nav-item">
                 <a
                   class="nav-link"
-                  href="promo.html"
+                  href="promo.php"
                   tabindex="-1"
                   aria-disabled="true"
                   >Promo</a
@@ -101,10 +101,8 @@
               </li>
             </ul>
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a
-                  href="whislist.html"
-                  class="btn btn-lg btn-danger text-light ml-5"
+              <li class="nav-item active">
+                <a class="btn btn-lg btn-danger text-light ml-5" href="whislist.php"
                   ><i class="fa fa-cart-arrow-down" aria-hidden="true"></i
                 ></a>
               </li>
@@ -114,81 +112,15 @@
       </div>
     </div>
 
-    <!--counter start-->
-    <div class="container counter">
-      <div
-        class="row justify-content-center mt-5 mb-2"
-        style="padding-top: 150px"
-      >
-        <h1 class="text-capitalize">
-          <strong>Mega sale akan segera dimulai </strong>
-        </h1>
-      </div>
-
-      <div
-        class="row justify-content-center rounded-pill mt-5"
-        style="padding-bottom: 100px; font-size: 70px"
-        id="countdown"
-      ></div>
-    </div>
-
-    <div class="container mt-5 mb-5">
-      <div class="row">
-        <div class="col-md-12 text-center text-capitalize">
-          <h1>e-commerce partners</h1>
-        </div>
-      </div>
-    </div>
-
-    <!--slider end-->
-
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="outer-div">
-            <div class="inner-div1">
-              <a href="https://shopee.co.id/"
-                ><img src="img/bahan lain/shopee.webp" alt="" srcset=""
-              /></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="outer-div">
-            <div class="inner-div2">
-              <a href="https://www.tokopedia.com/"
-                ><img src="img/bahan lain/tokopedia.jpg" alt="" srcset=""
-              /></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="outer-div">
-            <div class="inner-div3">
-              <a href="https://www.zalora.co.id/"
-                ><img src="img/bahan lain/zalora.jpg" alt="" srcset=""
-              /></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="outer-div">
-            <div class="inner-div4">
-              <a href="https://www.uniqlo.com/id/id/"
-                ><img src="img/bahan lain/uniqlo.svg" alt="" srcset=""
-              /></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- kolom 1 -->
+    <div class="tabel1 mt-5"></div>
+    <table id="t01">
+      <tr>
+        <th>Nama</th>
+        <th>Toko</th>
+        <th>Aksi</th>
+      </tr>
+    </table>
 
     <footer class="container-fluid mt-5">
       <div class="container pt-5 pb-5">
