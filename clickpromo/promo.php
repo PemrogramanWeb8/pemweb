@@ -22,13 +22,13 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="css/promo.css" />
+    <link rel="stylesheet" href="css/promo1.css" />
 
     <title>Promo</title>
     <link rel="website icon" type="png" href="img/bahan lain/logo2.png" />
   </head>
   <body>
-    <div class="container-fluid" style="background-color: #90AFC5">
+    <div class="container-fluid" style="background-color: #fffff">
       <div class="container">
         <nav class="navbar navbar-expand-lg">
           <a class="navbar-brand" href="#">CLICKPROMO</a>
@@ -146,7 +146,7 @@
           <div class="card product-card">
             <img class="card-img-top img-fluid" src="img/shopee/shop1.jpg" />
             <div class="card-body">
-              <div class="card-title">Product1</div>
+              <div class="card-title">Sendal wanita import</div>
               <div class="card-text">
                 <pre>Tersedia Size 36-40 
 With Box Original : China Material : PU 
@@ -166,7 +166,7 @@ Weight : 500grams.</pre><br />
           <div class="card product-card">
             <img class="card-img-top img-fluid" src="img/shopee/shop2.jpg" />
             <div class="card-body">
-              <div class="card-title">Product2</div>
+              <div class="card-title">New Fashion Sepatu Import</div>
               <div class="card-text">
                 <pre>Tersedia Size 36-40
 With Box Original : China Material : PU
