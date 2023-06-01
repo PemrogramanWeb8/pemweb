@@ -141,7 +141,7 @@ session_start();
               <p class="slider-title">HANYA DENGAN SATU CLICK</p>
               <p class="slider-text">Terdapat promo menarik setiap harinya</p>
               <p class="buttob mt-5">
-                <a href="logout.php" class="btn btn-danger btn-lg">KELUAR</a>
+                <a href="logout.php" class="btn btn-danger btn-lg"><< KELUAR</a>
               </p>
             </div>
           </div>

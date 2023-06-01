@@ -81,7 +81,7 @@
         class="btn btn-danger text-light mt-3 mb-2"
         href="administrator.php"
       >
-        Kembali
+        << Kembali
       </a>
 
     </div>

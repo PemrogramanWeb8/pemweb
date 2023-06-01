@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 &nbsp; &nbsp;
             </div>
             <button type="submit" class="btn btn-danger text-light mb-2">Tambah</button>
-            <a button type="submit" class="btn btn-danger text-light mb-2" href="administrator.php">Kembali</a>
+            <a button type="submit" class="btn btn-danger text-light mb-2" href="administrator.php"> << Kembali</a>
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"

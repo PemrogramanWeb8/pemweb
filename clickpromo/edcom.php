@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 &nbsp; &nbsp;
             </div>
             <button type="submit" class="btn btn-danger text-light mb-2">Tambah</button>
-            <a href="administrator.php" class="btn btn-danger text-light mb-2">Kembali</a>
+            <a href="administrator.php" class="btn btn-danger text-light mb-2"><< Kembali</a>
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
