@@ -1,11 +1,3 @@
-<?php
-
-error_reporting(0);
-
-session_start();
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -39,7 +31,7 @@ session_start();
     <div class="container-fluid" style="background-color: #ffffff">
       <div class="container">
         <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#">CLICKPROMO</a>
+          <a class="navbar-brand" href="#">CLICKPROMO</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -59,7 +51,7 @@ session_start();
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="e-com.php">E-Commerce</a>
+                <a class="nav-link" onclick='alert("Harap Login Terlebih dahulu")'>E-Commerce</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -76,9 +68,7 @@ session_start();
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="alang.html">Alang Artha</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="amdila.html"
-                    >Amdilla Rahmadi</a
-                  >
+                  <a class="dropdown-item" href="amdila.html">Amdilla Rahmadi</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="kia.html">Kia Putri</a>
                 </div>
@@ -86,7 +76,7 @@ session_start();
               <li class="nav-item">
                 <a
                   class="nav-link"
-                  href="promo.php"
+                  onclick='alert("Harap Login Terlebih dahulu")'
                   tabindex="-1"
                   aria-disabled="true"
                   >Promo</a
@@ -95,7 +85,7 @@ session_start();
               <li class="nav-item">
                 <a
                   class="nav-link"
-                  href="profil.html"
+                  onclick='alert("Harap Login Terlebih dahulu")'
                   tabindex="-1"
                   aria-disabled="true"
                   >Profil</a
@@ -104,7 +94,9 @@ session_start();
             </ul>
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="btn btn-lg btn-danger text-light ml-5" href="whislist.php"
+                <a
+                  class="btn btn-lg btn-danger text-light ml-5"
+                  onclick='alert("Harap Login Terlebih dahulu")'
                   ><i class="fa fa-cart-arrow-down" aria-hidden="true"></i
                 ></a>
               </li>
@@ -141,7 +133,9 @@ session_start();
               <p class="slider-title">HANYA DENGAN SATU CLICK</p>
               <p class="slider-text">Terdapat promo menarik setiap harinya</p>
               <p class="buttob mt-5">
-                <a href="login.php" class="btn btn-danger btn-lg">KELUAR</a>
+                <a href="register.php" class="btn btn-lg btn-success">DAFTAR</a
+                >&nbsp; &nbsp;
+                <a href="login.php" class="btn btn-danger btn-lg">MASUK</a>
               </p>
             </div>
           </div>
@@ -155,7 +149,9 @@ session_start();
               <p class="slider-title">BURUAN AMBIL PROMO SEKARANG JUGA !!!</p>
               <p class="slider-text">promo menarik dari setiap e-commerce</p>
               <p class="buttob mt-5">
-                <a href="login.php" class="btn btn-danger btn-lg">KELUAR</a>
+                <a href="register.php" class="btn btn-lg btn-success">DAFTAR</a
+                >&nbsp; &nbsp;
+                <a href="login.php" class="btn btn-danger btn-lg">MASUK</a>
               </p>
             </div>
           </div>
@@ -222,6 +218,9 @@ session_start();
 
       <div class="row mt-1 pb-5">
         <div class="col-md-12 text-center">
+          <a href="register.php" class="btn btn-danger text-light btn-lg"
+            >DAFTAR SEKARANG</a
+          >
         </div>
       </div>
     </div>
@@ -243,10 +242,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product1</div>
               <div class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
-                hic nobis molestias rem eius assumenda.<br />
-                <a class="btn btn-info">Got To Apk</a> &nbsp; &nbsp;
-                <a class="btn btn-success">Add To Cart</a>
+                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
               </div>
             </div>
           </div>
@@ -258,10 +255,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product2</div>
               <div class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
-                hic nobis molestias rem eius assumenda.<br />
-                <a class="btn btn-info">Promo</a> &nbsp; &nbsp;
-                <a class="btn btn-success">Add To Cart</a>
+                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
               </div>
             </div>
           </div>
@@ -276,10 +271,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product3</div>
               <div class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
-                hic nobis molestias rem eius assumenda.<br />
-                <a class="btn btn-info">Promo</a> &nbsp; &nbsp;
-                <a class="btn btn-success">Add To Cart</a>
+                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
               </div>
             </div>
           </div>
@@ -291,10 +284,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product4</div>
               <div class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
-                hic nobis molestias rem eius assumenda.<br />
-                <a class="btn btn-info">Promo</a> &nbsp; &nbsp;
-                <a class="btn btn-success">Add To Cart</a>
+                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
               </div>
             </div>
           </div>
@@ -306,10 +297,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product5</div>
               <div class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
-                hic nobis molestias rem eius assumenda.<br />
-                <a class="btn btn-info">Promo</a> &nbsp; &nbsp;
-                <a class="btn btn-success">Add To Cart</a>
+                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
               </div>
             </div>
           </div>
@@ -324,10 +313,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product6</div>
               <div class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
-                hic nobis molestias rem eius assumenda.<br />
-                <a class="btn btn-info">Promo</a> &nbsp; &nbsp;
-                <a class="btn btn-success">Add To Cart</a>
+                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
               </div>
             </div>
           </div>
@@ -339,10 +326,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product7</div>
               <div class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
-                hic nobis molestias rem eius assumenda.<br />
-                <a class="btn btn-info">Promo</a> &nbsp; &nbsp;
-                <a class="btn btn-success">Add To Cart</a>
+                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
               </div>
             </div>
           </div>
@@ -354,10 +339,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product8</div>
               <div class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
-                hic nobis molestias rem eius assumenda.<br />
-                <a class="btn btn-info">Promo</a> &nbsp; &nbsp;
-                <a class="btn btn-success">Add To Cart</a>
+                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
               </div>
             </div>
           </div>
@@ -381,10 +364,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product1</div>
               <div class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
-                hic nobis molestias rem eius assumenda.<br />
-                <a class="btn btn-info">Promo</a> &nbsp; &nbsp;
-                <a class="btn btn-success">Add To Cart</a>
+                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
               </div>
             </div>
           </div>
@@ -396,10 +377,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product2</div>
               <div class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
-                hic nobis molestias rem eius assumenda.<br />
-                <a class="btn btn-info">Promo</a> &nbsp; &nbsp;
-                <a class="btn btn-success">Add To Cart</a>
+                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
               </div>
             </div>
           </div>
@@ -411,10 +390,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product3</div>
               <div class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
-                hic nobis molestias rem eius assumenda.<br />
-                <a class="btn btn-info">Promo</a> &nbsp; &nbsp;
-                <a class="btn btn-success">Add To Cart</a>
+                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
               </div>
             </div>
           </div>
@@ -426,10 +403,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product4</div>
               <div class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
-                hic nobis molestias rem eius assumenda.<br />
-                <a class="btn btn-info">Promo</a> &nbsp; &nbsp;
-                <a class="btn btn-success">Add To Cart</a>
+                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
               </div>
             </div>
           </div>
@@ -441,10 +416,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product5</div>
               <div class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
-                hic nobis molestias rem eius assumenda.<br />
-                <a class="btn btn-info">Promo</a> &nbsp; &nbsp;
-                <a class="btn btn-success">Add To Cart</a>
+                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
               </div>
             </div>
           </div>
@@ -456,10 +429,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product6</div>
               <div class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
-                hic nobis molestias rem eius assumenda.<br />
-                <a class="btn btn-info">Promo</a> &nbsp; &nbsp;
-                <a class="btn btn-success">Add To Cart</a>
+                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
               </div>
             </div>
           </div>
@@ -471,10 +442,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product7</div>
               <div class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
-                hic nobis molestias rem eius assumenda.<br />
-                <a class="btn btn-info">Promo</a> &nbsp; &nbsp;
-                <a class="btn btn-success">Add To Cart</a>
+                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
               </div>
             </div>
           </div>
@@ -561,9 +530,10 @@ session_start();
               <input class="form-control" placeholder="Masukkan" />
               &nbsp; &nbsp;
             </div>
-            <button type="submit" class="btn btn-danger text-light mb-2">
-              Kirim
-            </button>
+            <a class="nav-link" onclick='alert("Harap Login Terlebih dahulu")'>
+              <button type="submit" class="btn btn-danger text-light mb-2"> 
+              Kirim</button>
+            </a>
           </form>
           <br />
           <img class="img-fluid" src="img/bahan lain/mail.svg" />
@@ -709,38 +679,44 @@ session_start();
       });
     </script>
     <script>
-      document.getElementById("feedbackForm").addEventListener("submit", function(event) {
-        event.preventDefault();
-    
-        var isLoggedIn = false; 
-    
-        if (isLoggedIn) {
-          var feedbackInput = document.getElementById("feedbackInput").value;
-          var formData = new FormData();
-          formData.append("feedback", feedbackInput);
-    
-          fetch("simpan_feedback.php", {
-            method: "POST",
-            body: formData
-          })
-          .then(function(response) {
-            if (response.ok) {
-              document.getElementById("feedbackForm").reset();
-              var successMessage = document.createElement("div");
-              successMessage.classList.add("success-message");
-              successMessage.innerText = "Feedback berhasil terkirim.";
-              document.getElementById("feedbackForm").appendChild(successMessage);
-            } else {
-              throw new Error("Terjadi kesalahan dalam mengirim feedback.");
-            }
-          })
-          .catch(function(error) {
-            console.log(error);
-          });
-        } else {
-          alert("Anda harus login terlebih dahulu untuk memberikan feedback.");
-        }
-      });
+      document
+        .getElementById("feedbackForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          var isLoggedIn = false;
+
+          if (isLoggedIn) {
+            var feedbackInput = document.getElementById("feedbackInput").value;
+            var formData = new FormData();
+            formData.append("feedback", feedbackInput);
+
+            fetch("simpan_feedback.php", {
+              method: "POST",
+              body: formData,
+            })
+              .then(function (response) {
+                if (response.ok) {
+                  document.getElementById("feedbackForm").reset();
+                  var successMessage = document.createElement("div");
+                  successMessage.classList.add("success-message");
+                  successMessage.innerText = "Feedback berhasil terkirim.";
+                  document
+                    .getElementById("feedbackForm")
+                    .appendChild(successMessage);
+                } else {
+                  throw new Error("Terjadi kesalahan dalam mengirim feedback.");
+                }
+              })
+              .catch(function (error) {
+                console.log(error);
+              });
+          } else {
+            alert(
+              "Anda harus login terlebih dahulu untuk memberikan feedback."
+            );
+          }
+        });
     </script>
   </body>
 </html>

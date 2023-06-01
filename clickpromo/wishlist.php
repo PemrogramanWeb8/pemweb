@@ -24,7 +24,7 @@
     />
     <link rel="stylesheet" href="css/whislist.css" />
 
-    <title>whislist</title>
+    <title>wishlist</title>
     <link rel="website icon" type="png" href="img/bahan lain/logo2.png" />
   </head>
   <body>
@@ -47,7 +47,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.php"
+                <a class="nav-link" href="dashboard.php"
                   >Home <span class="sr-only">(current)</span></a
                 >
               </li>
@@ -93,7 +93,7 @@
               <li class="nav-item">
                 <a
                   class="nav-link"
-                  href="profil.html"
+                  href="profil.php"
                   tabindex="-1"
                   aria-disabled="true"
                   >Profil</a
@@ -102,7 +102,7 @@
             </ul>
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="btn btn-lg btn-danger text-light ml-5" href="whislist.php"
+                <a class="btn btn-lg btn-danger text-light ml-5" href="wishlist.php"
                   ><i class="fa fa-cart-arrow-down" aria-hidden="true"></i
                 ></a>
               </li>

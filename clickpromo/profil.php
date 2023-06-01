@@ -1,3 +1,11 @@
+<?php
+
+error_reporting(0);
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -48,7 +56,7 @@
           button
           type="submit"
           class="btn btn-danger text-light mb-2"
-          href="index.php"
+          href="dashboard.php"
         >
           Kembali
         </a>
