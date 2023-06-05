@@ -42,7 +42,14 @@ session_start();
     <div class="sidebar close">
       <div class="logo-details">
         <i class="bx bx-book"></i>
-        <span class="logo_name">Alang Artha</span>
+        <span class="logo_name">
+          <?php
+            if (isset($_SESSION["akun-user"])) {
+                $nama = $_SESSION["akun-user"]["username"];
+                echo $nama;
+            }
+          ?>
+        </span>
       </div>
       <ul class="nav-links">
         <li>
@@ -77,7 +84,7 @@ session_start();
                 </div>
                 <ul class="sub-menu">
                     <li><a href="edcom.php">Tambah E-Commerce</a></li>
-                    <li><a href="delpromo.php">Delete E-Commerce</a></li>
+                    <li><a href="delcom.php">Delete E-Commerce</a></li>
                 </ul>
         </li>
         <li>
@@ -87,7 +94,7 @@ session_start();
           </a>
         </li>
         <li>
-          <a href="login.php">
+          <a href="logout.php">
             <i class="bx bx-arrow-back"></i>
             <span class="link_name">Keluar</span>
           </a>

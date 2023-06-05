@@ -4,24 +4,24 @@ session_start();
 include 'php/connect.php';
 include 'php/fungsi.php';
 
-$promo_data = get_all_promo();
+$ecom_data = get_all_ecom();
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $id_promo = $_POST["id_promo"];
-    $result = hapus_promo($id_promo);
+    $id_ecom = $_POST["id_ecom"];
+    $result = hapus_ecom($id_ecom);
+
     if ($result) {
         echo '<script>alert("Data berhasil dihapus.");</script>';
 
-        $gambar_promo = $promo['gambar_promo'];
-        $path = 'img/promo/' . $gambar_promo;
+        $gambar_ecom = $ecom['gambar_ecom'];
+        $path = 'img/e_com/' . $gambar_ecom;
         if (file_exists($path)) {
             unlink($path);
         }
 
-        // Refresh halaman
-        echo '<script>window.location.href = "delpromo.php";</script>';
+        echo '<script>window.location.href = "delcom.php";</script>';
     } else {
-        // Terjadi kesalahan saat menghapus data
+
         echo '<script>alert("Terjadi kesalahan saat menghapus data.");</script>';
     }
 }
@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Delete Promo</title>
+    <title>Delete E-commerce</title>
     <link rel="website icon" type="png" href="img/bahan lain/logo2.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
         rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
@@ -44,25 +44,23 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <!--kolom-->
     <div class="tabel1 mt-5">
         <?php
-        if (!empty($promo_data)) {
+        if (!empty($ecom_data)) {
             echo '<table id="t01">';
             echo '<thead>';
             echo '<tr>';
-            echo '<th>ID Promo</th>';
-            echo '<th>Nama Promo</th>';
-            echo '<th>Tanggal Batas</th>';
+            echo '<th>ID E-commerce</th>';
+            echo '<th>Nama E-commerce</th>';
             echo '<th>Aksi</th>';
             echo '</tr>';
             echo '</thead>';
             echo '<tbody>';
-            foreach ($promo_data as $promo) {
+            foreach ($ecom_data as $ecom) {
                 echo '<tr>';
-                echo '<td>' . $promo['id_promo'] . '</td>';
-                echo '<td>' . $promo['nama_promo'] . '</td>';
-                echo '<td>' . $promo['tgl_batas'] . '</td>';
+                echo '<td>' . $ecom['id_ecom'] . '</td>';
+                echo '<td>' . $ecom['Nama_Ecom'] . '</td>';
                 echo '<td>';
                 echo '<form method="POST" action="' . $_SERVER['PHP_SELF'] . '">';
-                echo '<input type="hidden" name="id_promo" value="' . $promo['id_promo'] . '">';
+                echo '<input type="hidden" name="id_ecom" value="' . $ecom['id_ecom'] . '">';
                 echo '<button type="submit" class="btn btn-danger text-light">Hapus</button>';
                 echo '</form>';
                 echo '</td>';
@@ -71,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             echo '</tbody>';
             echo '</table>';
         } else {
-            echo '<p>Tidak ada promo yang ditambahkan.</p>';
+            echo '<p>Tidak ada data e-commerce yang ditambahkan.</p>';
         }
         ?>
     </div>

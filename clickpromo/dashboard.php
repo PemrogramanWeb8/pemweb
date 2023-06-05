@@ -4,6 +4,22 @@ error_reporting(0);
 
 session_start();
 
+include 'php/connect.php';
+include 'php/fungsi.php';
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $feedback = $_POST["feedback"];
+    $id_cust = $_SESSION["akun-user"]["id_cust"];
+    $resultMessage = sendFeedback($feedback, $conn, $id_cust);
+    echo "<script>alert('$resultMessage');</script>";
+    
+    if ($result) {
+      echo "<script>alert('Feedback berhasil dikirim.'); window.location.href = 'dashboard.php';</script>";
+    } else {
+      echo "<script>alert('Terjadi kesalahan saat menyimpan feedback.');</script>";
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -243,8 +259,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product1</div>
               <div class="card-text">
-                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
-                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
+              <a class="btn btn-info" >App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" >Wishlist >></a>
               </div>
             </div>
           </div>
@@ -256,8 +272,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product2</div>
               <div class="card-text">
-                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
-                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
+              <a class="btn btn-info" >App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" >Wishlist >></a>
               </div>
             </div>
           </div>
@@ -272,8 +288,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product3</div>
               <div class="card-text">
-                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
-                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
+              <a class="btn btn-info" >App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" >Wishlist >></a>
               </div>
             </div>
           </div>
@@ -285,8 +301,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product4</div>
               <div class="card-text">
-                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
-                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
+              <a class="btn btn-info" >App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" >Wishlist >></a>
               </div>
             </div>
           </div>
@@ -298,8 +314,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product5</div>
               <div class="card-text">
-                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
-                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
+              <a class="btn btn-info" >App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" >Wishlist >></a>
               </div>
             </div>
           </div>
@@ -314,8 +330,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product6</div>
               <div class="card-text">
-                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
-                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
+              <a class="btn btn-info" >App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" >Wishlist >></a>
               </div>
             </div>
           </div>
@@ -327,8 +343,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product7</div>
               <div class="card-text">
-                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
-                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
+              <a class="btn btn-info" >App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" >Wishlist >></a>
               </div>
             </div>
           </div>
@@ -340,8 +356,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product8</div>
               <div class="card-text">
-                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
-                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
+              <a class="btn btn-info" >App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" >Wishlist >></a>
               </div>
             </div>
           </div>
@@ -365,8 +381,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product1</div>
               <div class="card-text">
-                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
-                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
+              <a class="btn btn-info" >App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" >Wishlist >></a>
               </div>
             </div>
           </div>
@@ -378,8 +394,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product2</div>
               <div class="card-text">
-                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
-                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
+              <a class="btn btn-info" >App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" >Wishlist >></a>
               </div>
             </div>
           </div>
@@ -391,8 +407,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product3</div>
               <div class="card-text">
-                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
-                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
+              <a class="btn btn-info" >App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" >Wishlist >></a>
               </div>
             </div>
           </div>
@@ -404,8 +420,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product4</div>
               <div class="card-text">
-                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
-                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
+              <a class="btn btn-info" >App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" >Wishlist >></a>
               </div>
             </div>
           </div>
@@ -417,8 +433,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product5</div>
               <div class="card-text">
-                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
-                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
+              <a class="btn btn-info" >App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" >Wishlist >></a>
               </div>
             </div>
           </div>
@@ -430,8 +446,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product6</div>
               <div class="card-text">
-                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
-                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
+              <a class="btn btn-info" >App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" >Wishlist >></a>
               </div>
             </div>
           </div>
@@ -443,8 +459,8 @@ session_start();
             <div class="card-body">
               <div class="card-title">Product7</div>
               <div class="card-text">
-                <a class="btn btn-info" onclick='alert("Harap Login Terlebih dahulu")'>App >></a> &nbsp; &nbsp;
-                <a class="btn btn-success" onclick='alert("Harap Login Terlebih dahulu")'>Whislist >></a>
+                <a class="btn btn-info" >App >></a> &nbsp; &nbsp;
+                <a class="btn btn-success" >Wishlist >></a>
               </div>
             </div>
           </div>
@@ -517,50 +533,46 @@ session_start();
         </div>
       </div>
     </div>
-
+    
     <div class="container mt-5 mb-5">
-      <div class="row">
-        <div class="col-md-6 service">
-          <p class="icon pt-5 pb-2">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-          </p>
-          <h2 class="text-capitalize">Berikan Masukan Anda Disini</h2>
-          <form s="form-inline">
-            <div class="form-group mx-sm-12 mb-2">
-              <label for="inputPassword2" class="sr-only">Mail</label>
-              <input class="form-control" placeholder="Masukkan" />
-              &nbsp; &nbsp;
-            </div>
-            <button type="submit" class="btn btn-danger text-light mb-2">
-              Kirim
-            </button>
-          </form>
-          <br />
-          <img class="img-fluid" src="img/bahan lain/mail.svg" />
-          <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+  <div class="row">
+    <div class="col-md-6 service">
+      <p class="icon pt-5 pb-2">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+      </p>
+      <h2 class="text-capitalize">Berikan Masukan Anda Disini</h2>
+      <form id="feedbackForm" action="php/fungsi.php" method="POST">
+        <div class="form-group mx-sm-12 mb-2">
+          <label for="feedback" class="sr-only">Feedback</label>
+          <input type="text" class="form-control" placeholder="Masukkan" name="feedback" required>
         </div>
-
-        <div class="col-md-6 service">
-          <p class="icon pt-5 pb-2">
-            <i class="fa fa-cogs" aria-hidden="true"></i>
-          </p>
-          <h2 class="text-capitalize">Pelayanan Kami</h2>
-          <p>
-            <i class="fa fa-handshake-o" aria-hidden="true"></i> anti ribet.
-          </p>
-          <p>
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i> belanja
-            murah.
-          </p>
-          <p>
-            <i class="fa fa-cart-plus" aria-hidden="true"></i> promo lengkap.
-          </p>
-          <p>
-            <i class="fa fa-shopping-bag" aria-hidden="true"></i> platform luas.
-          </p>
-        </div>
-      </div>
+        <button type="submit" class="btn btn-danger text-light mb-2">Kirim</button>
+      </form>
+      <br />
+      <img class="img-fluid" src="img/bahan lain/mail.svg" alt="Mail Icon" />
+      <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
     </div>
+
+    <div class="col-md-6 service">
+      <p class="icon pt-5 pb-2">
+        <i class="fa fa-cogs" aria-hidden="true"></i>
+      </p>
+      <h2 class="text-capitalize">Pelayanan Kami</h2>
+      <p>
+        <i class="fa fa-handshake-o" aria-hidden="true"></i> anti ribet.
+      </p>
+      <p>
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i> belanja murah.
+      </p>
+      <p>
+        <i class="fa fa-cart-plus" aria-hidden="true"></i> promo lengkap.
+      </p>
+      <p>
+        <i class="fa fa-shopping-bag" aria-hidden="true"></i> platform luas.
+      </p>
+    </div>
+  </div>
+</div>
 
     <footer class="container-fluid mt-5">
       <div class="container pt-5 pb-5">
@@ -678,39 +690,25 @@ session_start();
         },
       });
     </script>
-    <script>
-      document.getElementById("feedbackForm").addEventListener("submit", function(event) {
-        event.preventDefault();
-    
-        var isLoggedIn = false; 
-    
-        if (isLoggedIn) {
-          var feedbackInput = document.getElementById("feedbackInput").value;
-          var formData = new FormData();
-          formData.append("feedback", feedbackInput);
-    
-          fetch("simpan_feedback.php", {
-            method: "POST",
-            body: formData
-          })
-          .then(function(response) {
-            if (response.ok) {
-              document.getElementById("feedbackForm").reset();
-              var successMessage = document.createElement("div");
-              successMessage.classList.add("success-message");
-              successMessage.innerText = "Feedback berhasil terkirim.";
-              document.getElementById("feedbackForm").appendChild(successMessage);
-            } else {
-              throw new Error("Terjadi kesalahan dalam mengirim feedback.");
-            }
-          })
-          .catch(function(error) {
-            console.log(error);
-          });
-        } else {
-          alert("Anda harus login terlebih dahulu untuk memberikan feedback.");
-        }
-      });
-    </script>
+<script>
+  document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Mencegah pengiriman formulir secara default
+
+    // Mengambil data formulir
+    var formData = new FormData(this);
+
+    // Mengirim data ke fungsi.php menggunakan AJAX
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "php/fungsi.php", true);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        alert(xhr.responseText); // Menampilkan pesan balasan dari server
+        // Lakukan tindakan tambahan setelah pengiriman berhasil, jika diperlukan
+      }
+    };
+    xhr.send(formData);
+  });
+</script>
+
   </body>
 </html>
