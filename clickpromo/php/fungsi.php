@@ -101,7 +101,7 @@ function sendFeedback($feedback, $conn, $id_cust) {
     $insertQuery = "INSERT INTO feedback (id_cust, konten) VALUES ('', '$id_cust', '$feedback')";
     $result = mysqli_query($conn, $insertQuery);
 
-    if ($result) {
+    if ($resultMessage) {
         // penyimpanan berhasil
         return true;
     } else {
@@ -124,11 +124,10 @@ function tambah_wishlist($conn, $id_promo, $id_cust, $link_promo, $tgl_batas, $n
     }
 }  
 
-function hapus_wishlist(){
+function hapus_wishlist($id_wh){
     global $conn;
-    $id_promo = $_GET["id_promo"];
 
-    mysqli_query($conn, "DELETE FROM promo WHERE id_promo = $id_promo");
+    mysqli_query($conn, "DELETE FROM wishlist WHERE id_wishlist = $id_wh");
 
     return mysqli_affected_rows($conn);
 }

@@ -544,7 +544,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       <form id="feedbackForm" action="php/fungsi.php" method="POST">
         <div class="form-group mx-sm-12 mb-2">
           <label for="feedback" class="sr-only">Feedback</label>
-          <input type="text" class="form-control" placeholder="Masukkan" name="feedback" required>
+          <input type="text" class="form-control" id="feedback" name="feedback" required>
         </div>
         <button type="submit" class="btn btn-danger text-light mb-2">Kirim</button>
       </form>
@@ -699,7 +699,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Mengirim data ke fungsi.php menggunakan AJAX
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "php/fungsi.php", true);
+    xhr.open("POST", "./php/fungsi.php", true);
     xhr.onreadystatechange = function() {
       if (xhr.readyState === 4 && xhr.status === 200) {
         alert(xhr.responseText); // Menampilkan pesan balasan dari server
@@ -707,6 +707,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       }
     };
     xhr.send(formData);
+    console.log(xhr.send(formData));
   });
 </script>
 

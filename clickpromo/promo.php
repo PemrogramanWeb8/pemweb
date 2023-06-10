@@ -178,8 +178,11 @@ include 'php/wishlist_process.php';
             </div>
             <div class="promo-details">
               <h4><?php echo $nama_promo; ?></h4>
+              <form action = "php\wishlist_process.php" method = "POST">
               <a href="<?php echo $link_promo; ?>" class="btn btn-primary">App >></a>
+              <input type="hidden" name="id_promo" value="<?php echo $promo_row['id_promo']; ?>">
               <button class="btn btn-secondary wishlist-btn" data-promo-id="<?php echo $promo_row['id_promo']; ?>">Wishlist >></button>
+              </form>
             </div>
           </div>
           <?php

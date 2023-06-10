@@ -130,7 +130,7 @@ echo $id_cust;
         </tr>
         <?php
         $id_cust = $_SESSION['id_cust'];
-
+        $id_cust = 1;
         $wishlist_query = "SELECT * FROM wishlist WHERE id_cust = ?";
         $stmt = mysqli_prepare($conn, $wishlist_query);
         mysqli_stmt_bind_param($stmt, "i", $id_cust);
@@ -147,8 +147,9 @@ echo $id_cust;
               <td><?php echo $nama_promo; ?></td>
               <td><?php echo $tgl_batas_promo; ?></td>
               <td>
-                <form action="hapus_wishlist.php" method="post">
+                <form action="php\wishlist_process.php" method="post">
                   <input type="hidden" name="id_wishlist" value="<?php echo $id_wishlist; ?>">
+                  <input type="hidden" name="id_promo" value="1">
                   <button type="submit">Hapus</button>
                 </form>
               </td>
